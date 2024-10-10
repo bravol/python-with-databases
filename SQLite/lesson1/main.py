@@ -11,7 +11,7 @@ employees = [(1, 'Elsad', 'Instructor'),
              (2, 'Ronald', 'Developer'),
              (3, 'e','e')]
 
-cursor.execute('''INSERT INTO Employees VALUES (?, ?, ?)''',employees)
+cursor.executemany('''INSERT INTO Employees VALUES (?, ?, ?)''',employees)
 
 connection.commit()
 connection.close()
